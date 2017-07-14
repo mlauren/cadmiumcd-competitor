@@ -1,0 +1,396 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: $txtColor;
+    background-color: $backgroundColorTile;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0 0 35px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    @media(min-width: 768px) {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0 0 35px;
+    }
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: $primary;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: darken($primary, 20%);
+    }
+}
+
+.font-default {
+    color: $primary;
+}
+
+#mainNav {
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid fade-out(white, .7);
+    background-color: black;
+    .navbar-toggler {
+        font-size: 14px;
+        padding: 11px;
+        color: white;
+        border: 1px solid white;
+    }
+    .navbar-brand {
+        font-weight: 700;
+    }
+    a {
+        color: white;
+    }
+    .navbar-nav {
+        .nav-item {
+            -webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+            &:hover {
+                color: fade(white, 80%);
+                outline: none;
+                background-color: transparent;
+            }
+            &:focus,
+            &:active {
+                outline: none;
+                background-color: transparent;
+            }
+        }
+    }
+    @media(min-width:768px) {
+        padding: 20px 0;
+        -webkit-transition: background .25s ease-in-out, padding .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out, padding .25s ease-in-out;
+        transition: background .25s ease-in-out, padding .25s ease-in-out;
+        letter-spacing: 1px;
+        border-bottom: none;
+        background: transparent;
+        &.navbar-shrink {
+            padding: 10px 0;
+            border-bottom: 1px solid fade-out(white, .7);
+            background: black;
+        }
+        .nav-link.active {
+            outline: none;
+            background-color: rgba(white, .3);
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+.masthead {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 10em 0;
+    text-align: center;
+    color: white;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 78%;
+
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+        .brand-heading {
+            font-size: 40px;
+        }
+        .intro-text {
+            font-size: 18px;
+        }
+    }
+    @media(min-width:768px) {
+        text-align: left;
+        height: 100%;
+        padding: 4em 0 0;
+        .intro-body {
+            .brand-heading {
+                font-size: 5em;
+            }
+            .intro-text {
+                font-size: 22px;
+            }
+
+        }
+    }
+}
+
+.btn-circle {
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    padding: 7px 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100% !important;
+    background: transparent;
+    &:hover,
+    &:focus {
+        color: white;
+        outline: none;
+        background: fade-out(white, .9);
+    }
+}
+
+@media (max-width:425px) {
+
+    .mobile-bkg-white {
+        background-color: white;
+    }
+
+}
+
+
+
+.content-section {
+    padding-top: 100px;
+
+
+    .section-slant-up {
+        &.bkg-white {
+
+            .section__bg {
+                background-color: white;
+            }
+        }
+        .section__bg {
+            transform: skew(0,-2deg);
+            min-height: 150px;
+            margin-bottom: -2em;
+            @media (min-width:425px) {
+                min-height: 70px;
+            }
+        }
+        
+    }
+
+    .section-slant-down {
+        &.bkg-white {
+            .section__bg {
+                background-color: white;
+            }
+        }
+        .section__bg {
+            transform: skew(0, 2deg);
+            min-height: 0;
+            margin-top: -2em;
+            margin-bottom: 2em;
+
+            @media (min-width:525px) {
+                min-height: 150px;
+            }
+        }
+        
+    }
+    
+}
+
+.download-section {
+    width: 100%;
+    padding: 100px 0;
+    color: white;
+    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.comparison-section {
+    width: 100%;
+    padding: 50px 0;
+
+    &.bkg-white {
+        background-color: white;
+    }
+    .comparison-row {
+        padding: .8em 0;
+        border-bottom: 1px solid #dedede;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+@media(min-width:767px) {
+
+    #map {
+        height: 350px;
+        margin-top: 250px;
+    }
+}
+
+.btn {
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+}
+
+.btn-default {
+    color: white;
+    border: 1px solid $primary;
+    background-color: $primary;
+    border-radius: 4em;
+    padding: .5em 1em;
+    letter-spacing: .042em;
+    &:hover,
+    &:focus {
+        color: white;
+        border: 1px solid $primary;
+        outline: none;
+        background-color: $primary;
+    }
+}
+
+.btn-grey {
+    color: white;
+    border: 1px solid darken($backgroundColorTile, 20%);
+    background-color: darken($backgroundColorTile, 20%);
+    border-radius: 4em;
+    padding: .5em 1em;
+    letter-spacing: .042em;
+    &:hover,
+    &:focus {
+        color: white;
+        border: 1px solid darken($backgroundColorTile, 20%);
+        outline: none;
+        background-color: darken($backgroundColorTile, 20%);
+    }
+}
+
+@media(min-width:768px) {
+    .col-sm-2-2 {
+        width: 19.3333333%;
+        display: inline-block;
+        box-sizing: border-box;
+        min-height: 210px;
+        vertical-align: middle;
+    }
+}
+
+.feature-list {
+    .feature-list-item {
+        p {padding-top: 2em;}
+        i {color: $primary;}
+    }
+}
+
+
+ul.banner-social-buttons {
+    margin-top: 0;
+    @media(max-width: 1199px) {
+        margin-top: 15px;
+    }
+    @media(max-width:767px) {
+        li {
+            display: block;
+            margin-bottom: 20px;
+            padding: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+footer {
+    .footer-content-section {
+        padding-top: 2em;
+    }
+
+    padding: 50px 0;
+    background-color: darken($backgroundColorTile, 75%);
+    p {
+        font-size: 14px;
+        color: white;
+        margin: 0;
+    }
+    @media(max-width:767px) {
+
+    }
+}
+
+::-moz-selection {
+    background: #fcfcfc;
+    background: fade-out(white, .8);
+    text-shadow: none;
+}
+
+::selection {
+    background: #fcfcfc;
+    background: fade-out(white, .8);
+    text-shadow: none;
+}
+
+img::selection {
+    background: transparent;
+}
+
+img::-moz-selection {
+    background: transparent;
+}
+
+body {
+    -webkit-tap-highlight-color: fade-out(white, .8);
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #a7afb5;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}

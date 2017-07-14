@@ -1,0 +1,35 @@
+{
+    "title": "CadmiumCD Competitor Pages",
+    "name": "cadmiumcd-competitor",
+    "description": "HTML theme using Bootstrap.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "http://reapmarketing.com/",
+    "author": "Lauren M.",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "bootstrap": "^4.0.0-alpha.6",
+        "font-awesome": "4.7.0",
+        "jquery": "^3.2.1",
+        "jquery.easing": "^1.4.1",
+        "tether": "^1.4.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.8",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "3.2.0",
+        "gulp-header": "1.8.8",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^2.1.2"
+    }
+}
