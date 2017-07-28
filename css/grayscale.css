@@ -114,6 +114,8 @@ a {
   -o-background-size: cover;
   background-size: cover;
   background-position: 78%; }
+  .masthead.event-scribe {
+    background: url(../img/intro-bg-eventscribe.jpg) no-repeat center center scroll; }
   .masthead .intro-body {
     display: table-cell;
     vertical-align: middle; }

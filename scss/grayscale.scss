@@ -123,6 +123,11 @@ a {
     text-align: center;
     color: white;
     background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+
+    &.event-scribe {
+        background: url(../img/intro-bg-eventscribe.jpg) no-repeat center center scroll;
+
+    }
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
