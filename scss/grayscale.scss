@@ -126,7 +126,8 @@ a {
 
     &.event-scribe {
         background: url(../img/intro-bg-eventscribe.jpg) no-repeat center center scroll;
-
+        background-size: cover;
+        background-position: 71%;
     }
     background-color: black;
     -webkit-background-size: cover;
@@ -406,13 +407,14 @@ body {
 
 
 
-@media(min-width:1200px) {
+@media(min-width:1330px) {
 
     .container.special-width {
-        width: 1200px!important;
+        width: 1330px!important;
 
     }
 }
+
 .table-comparison {
 
     &.event-scribe {
